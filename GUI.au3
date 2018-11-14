@@ -70,7 +70,7 @@ Func _Help()
 EndFunc   ;==>_Help
 
 Func _filePath()
-	Local $sFileOpenDialog = _WinAPI_GetOpenFileName("Choose file to Upload", @WorkingDir & "\", "All (*.*)", 1)
+	Local $sFileOpenDialog = _WinAPI_GetOpenFileName("Choose file to Upload", "All (*.*)", 1)
 	If Not @error Then
 		FileChangeDir(@ScriptDir)
 		$filePath = $sFileOpenDialog[1] & "\" & $sFileOpenDialog[2]
